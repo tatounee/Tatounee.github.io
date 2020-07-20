@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+	<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+		<title>
+			JsCalculatrice
+		</title>
+	<script src="script.js" async="async"></script>
+	</head>
+	<body>
+        <div class="page">
+            <div class="bloque">
+                <div class="name">
+                    JsCalculatrice
+                </div>
+                <div class="kiwi">
+                    <div class="calcOut">
+                        <div id="resultat"></div>
+                        <label id="calculs"></label>
+                    </div>
+                    <div class="calcIn">
+                        <table id="pavage">
+                            <tr>
+                                <td onclick="addCalule('7')">7</td>
+                                <td onclick="addCalule('8')">8</td>
+                                <td onclick="addCalule('9')">9</td>
+                                <td onclick="subCalule()">DEL</td>
+                            </tr>
+                            <tr>
+                                <td onclick="addCalule('4')">4</td>
+                                <td onclick="addCalule('5')">5</td>
+                                <td onclick="addCalule('6')">6</td>
+                                <td onclick="addCalule('*')">x</td>
+                            </tr>
+                            <tr>
+                                <td onclick="addCalule('1')">1</td>
+                                <td onclick="addCalule('2')">2</td>
+                                <td onclick="addCalule('3')">3</td>
+                                <td onclick="addCalule('/')">/</td>
+                            </tr>
+                            <tr>
+                                <td onclick="addCalule('0')">0</td>
+                                <td onclick="addCalule('-')">-</td>
+                                <td onclick="addCalule('+')">+</td>
+                                <td onclick="centrifuge()">=</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</body>
+</html>
