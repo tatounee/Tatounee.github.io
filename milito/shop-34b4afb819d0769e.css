@@ -30,7 +30,7 @@
 }
 
 .card > div:last-child::after {
-    content: url("../assets/images/coin.png");
+    content: url("./assets/images/coin.png");
     display: block;
     position: absolute;
     right: 5px;
@@ -90,7 +90,7 @@
 }
 
 .sold::before {
-    content: url("../assets/images/argents.png");
+    content: url("./assets/images/argents.png");
     display: block;
     position: absolute;
     left: -15px;
