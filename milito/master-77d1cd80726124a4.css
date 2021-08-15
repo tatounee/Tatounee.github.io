@@ -16,7 +16,7 @@ html, body {
 }
 
 body {
-    background-image: url("/assets/images/space_bg.png");
+    background-image: url("./assets/images/space_bg.png");
     display: flex;
     flex-direction: column;
     justify-content: center;
