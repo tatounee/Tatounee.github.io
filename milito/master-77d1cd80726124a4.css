@@ -5,7 +5,7 @@
 
 * {
     color: #1a1a1a;
-    font-family: 'Courier New', monospace;
+    font-family: Cascadia;
     margin: 0;
     padding: 0;
 }
@@ -16,7 +16,7 @@ html, body {
 }
 
 body {
-    background-image: url("./assets/images/space_bg.png");
+    background-image: url("../assets/images/space_bg.png");
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -60,58 +60,59 @@ body {
 /* Sprites image */
 
 .player-img {
-    background-image: url("./assets/images/player.png");
+    background-image: url("../assets/images/player.png");
     background-repeat: no-repeat;
     width: 128px;
     height: 128px;
 }
 
 .player-upgrade-img {
-    background-image: url("./assets/images/upgrade.png");
+    background-image: url("../assets/images/upgrade.png");
     background-repeat: no-repeat;
     width: 128px;
     height: 128px;
 }
 
 .player-projectile-img {
-    background-image: url("./assets/images/player_projectile.png");
+    background-image: url("../assets/images/player_projectile.png");
     background-repeat: no-repeat;
     width: 32px;
     height: 32px;
 }
 
 .turret-img {
-    background-image: url("./assets/images/turrets.png");
+    background-image: url("../assets/images/turrets.png");
     background-repeat: no-repeat;
     width: 128px;
     height: 128px;
     top: -10px;
+    /* z-index: 2; */
 }
 
 .god-img {
-    background-image: url("./assets/images/dieu.png");
+    background-image: url("../assets/images/dieu.png");
     background-repeat: no-repeat;
     width: 64px;
     height: 64px;
 }
 
 .enemy-img {
-    background-image: url("./assets/images/enemies.png");
+    background-image: url("../assets/images/enemies.png");
     background-repeat: no-repeat;
     width: 128px;
     height: 128px;
-    z-index: 3;
+    z-index: 2;
 }
 
 .projectile-img {
-    background-image: url("./assets/images/turrets_projectiles.png");
+    background-image: url("../assets/images/turrets_projectiles.png");
     background-repeat: no-repeat;
     width: 32px;
     height: 32px;
 }
 
 .laser-img {
-    background-image: url("./assets/images/laser_center.png");
+    background-image: url("../assets/images/laser_center.png");
     height: 32px;
     animation: move-y 1s steps(16) infinite;
 }
