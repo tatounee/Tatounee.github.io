@@ -273,10 +273,17 @@ async function load(module, imports) {
 
 async function init(input) {
     if (typeof input === 'undefined') {
-        input = new URL('index-449b3d1a9fbdf231_bg.wasm', import.meta.url);
+        input = new URL('index-fbe868c2565e5554_bg.wasm', import.meta.url);
     }
     const imports = {};
     imports.wbg = {};
+    imports.wbg.__wbindgen_object_drop_ref = function(arg0) {
+        takeObject(arg0);
+    };
+    imports.wbg.__wbindgen_object_clone_ref = function(arg0) {
+        var ret = getObject(arg0);
+        return addHeapObject(ret);
+    };
     imports.wbg.__wbindgen_cb_drop = function(arg0) {
         const obj = takeObject(arg0).original;
         if (obj.cnt-- == 1) {
@@ -285,13 +292,6 @@ async function init(input) {
         }
         var ret = false;
         return ret;
-    };
-    imports.wbg.__wbindgen_object_drop_ref = function(arg0) {
-        takeObject(arg0);
-    };
-    imports.wbg.__wbindgen_object_clone_ref = function(arg0) {
-        var ret = getObject(arg0);
-        return addHeapObject(ret);
     };
     imports.wbg.__wbindgen_string_new = function(arg0, arg1) {
         var ret = getStringFromWasm0(arg0, arg1);
@@ -406,9 +406,22 @@ async function init(input) {
         var ret = getObject(arg0) instanceof KeyboardEvent;
         return ret;
     };
-    imports.wbg.__wbg_keyCode_218ac9c01e06b3d5 = function(arg0) {
-        var ret = getObject(arg0).keyCode;
-        return ret;
+    imports.wbg.__wbg_key_6827d862c9cc3928 = function(arg0, arg1) {
+        var ret = getObject(arg1).key;
+        var ptr0 = passStringToWasm0(ret, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+        var len0 = WASM_VECTOR_LEN;
+        getInt32Memory0()[arg0 / 4 + 1] = len0;
+        getInt32Memory0()[arg0 / 4 + 0] = ptr0;
+    };
+    imports.wbg.__wbg_code_4b7138c233a8745f = function(arg0, arg1) {
+        var ret = getObject(arg1).code;
+        var ptr0 = passStringToWasm0(ret, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+        var len0 = WASM_VECTOR_LEN;
+        getInt32Memory0()[arg0 / 4 + 1] = len0;
+        getInt32Memory0()[arg0 / 4 + 0] = ptr0;
+    };
+    imports.wbg.__wbg_preventDefault_7c4d18eb2bb1a26a = function(arg0) {
+        getObject(arg0).preventDefault();
     };
     imports.wbg.__wbg_addEventListener_6d9a78a5d277bdaf = function() { return handleError(function (arg0, arg1, arg2, arg3, arg4) {
         getObject(arg0).addEventListener(getStringFromWasm0(arg1, arg2), getObject(arg3), getObject(arg4));
@@ -429,6 +442,9 @@ async function init(input) {
     imports.wbg.__wbg_setAttribute_27ca65e30a1c3c4a = function() { return handleError(function (arg0, arg1, arg2, arg3, arg4) {
         getObject(arg0).setAttribute(getStringFromWasm0(arg1, arg2), getStringFromWasm0(arg3, arg4));
     }, arguments) };
+    imports.wbg.__wbg_log_9a99fb1af846153b = function(arg0) {
+        console.log(getObject(arg0));
+    };
     imports.wbg.__wbg_clearInterval_0bbfaf2ae16a4679 = function(arg0, arg1) {
         getObject(arg0).clearInterval(arg1);
     };
@@ -502,15 +518,15 @@ async function init(input) {
     imports.wbg.__wbindgen_throw = function(arg0, arg1) {
         throw new Error(getStringFromWasm0(arg0, arg1));
     };
-    imports.wbg.__wbindgen_closure_wrapper415 = function(arg0, arg1, arg2) {
-        var ret = makeMutClosure(arg0, arg1, 177, __wbg_adapter_16);
+    imports.wbg.__wbindgen_closure_wrapper184 = function(arg0, arg1, arg2) {
+        var ret = makeMutClosure(arg0, arg1, 20, __wbg_adapter_16);
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper499 = function(arg0, arg1, arg2) {
+    imports.wbg.__wbindgen_closure_wrapper534 = function(arg0, arg1, arg2) {
         var ret = makeMutClosure(arg0, arg1, 191, __wbg_adapter_19);
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper500 = function(arg0, arg1, arg2) {
+    imports.wbg.__wbindgen_closure_wrapper535 = function(arg0, arg1, arg2) {
         var ret = makeMutClosure(arg0, arg1, 191, __wbg_adapter_22);
         return addHeapObject(ret);
     };
