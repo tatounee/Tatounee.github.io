@@ -40,8 +40,7 @@
 
 .buy {
     padding: 0 1rem;
-    width: 50%;
-    flex-basis: 1;
+    max-width: 72%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -52,19 +51,23 @@
 }
 
 
-.buy > .turrets {
-    padding: 0 1rem;
+.turrets {
+    margin-left: 2rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    overflow: auto;
 }
 
-.buy > .turrets > .card {
+.turrets > .card {
     margin-left: 1rem;
 }
 
+.turrets > .card:first-child {
+    margin-left: 0;
+}
+
 .data {
-    width: 50%;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
