@@ -176,7 +176,7 @@ function getInt32Memory0() {
 
 function makeMutClosure(arg0, arg1, dtor, f) {
     const state = { a: arg0, b: arg1, cnt: 1, dtor };
-    const real = (..args) => {
+    const real = (...args) => {
         // First up with a closure we increment the internal reference
         // count. This ensures that the Rust closure environment won't
         // be deallocated while we're invoking it.
@@ -184,7 +184,7 @@ function makeMutClosure(arg0, arg1, dtor, f) {
         const a = state.a;
         state.a = 0;
         try {
-            return f(a, state.b, ..args);
+            return f(a, state.b, ...args);
         } finally {
             if (--state.cnt === 0) {
                 wasm.__wbindgen_export_2.get(state.dtor)(a, state.b);
@@ -273,7 +273,7 @@ async function load(module, imports) {
 
 async function init(input) {
     if (typeof input === 'undefined') {
-        input = new URL('index-abb18a5f52a974a3_bg.wasm', import.meta.url);
+        input = new URL('index-542e6cd1e9d8f2e_bg.wasm', import.meta.url);
     }
     const imports = {};
     imports.wbg = {};
